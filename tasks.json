@@ -1,0 +1,42 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build and Start Development Server",
+			"type": "shell",
+			"command": "npm install && npm run dev",
+			"group": "build",
+			"isBackground": true,
+			"problemMatcher": [
+				"$tsc",
+				"$eslint-stylish"
+			]
+		},
+		{
+			"label": "Start Backend Server",
+			"type": "shell",
+			"command": "node server/index.js",
+			"group": "build",
+			"isBackground": true,
+			"problemMatcher": []
+		},
+		{
+			"label": "vite-build-check",
+			"type": "shell",
+			"command": "npm run build",
+			"isBackground": false,
+			"problemMatcher": [
+				"$tsc"
+			],
+			"group": "build"
+		},
+		{
+			"label": "start-server",
+			"type": "shell",
+			"command": "node server/index.js",
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}
